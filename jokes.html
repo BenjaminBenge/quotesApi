@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frontend Jokes</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 50px;
+    }
+    .joke-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-size: 1.2rem;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>😂 Frontend Dev Jokes</h1>
+  <div class="joke-box" id="joke">Click below to get a joke!</div>
+  <button onclick="getJoke()">Tell me a joke</button>
+
+  <script>
+    async function getJoke() {
+      const res = await fetch("https://v2.jokeapi.dev/joke/Programming?type=single");
+      const data = await res.json();
+      document.getElementById("joke").textContent = data.joke || "Couldn't find a joke!";
+    }
+  </script>
+
+</body>
+</html>

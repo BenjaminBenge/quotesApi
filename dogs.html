@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Quotes</title>
+    <link rel="stylesheet" href="dog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐶 Dog Quotes</h1>
+            <div class="controls">
+                <button id="new-quote-btn">
+                    <i class="fas fa-paw"></i> New Quote
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="quote-card">
+                <div class="dog-image-container">
+                    <img id="dog-image" src="" alt="Random dog">
+                </div>
+                <div class="quote-content">
+                    <div class="quote-text">
+                        <i class="fas fa-quote-left"></i>
+                        <span id="quote">Click the button to load a dog quote</span>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="quote-author" id="author"></div>
+                    <div class="quote-actions">
+                        <button id="twitter-btn">
+                            <i class="fab fa-twitter"></i> Tweet
+                        </button>
+                        <button id="copy-btn">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by <a href="https://dog.ceo/dog-api/" target="_blank">Dog API</a> and <a href="https://api-ninjas.com/api/quotes" target="_blank">Quotes API</a></p>
+        </footer>
+    </div>
+
+    <script src="dogs.js"></script>
+</body>
+</html>

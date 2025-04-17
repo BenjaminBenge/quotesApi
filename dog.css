@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive, sans-serif;
+}
+
+body {
+    background-color: #f9f3e9;
+    color: #5a3e36;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #8b5a2b;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #d4a373;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    background-color: #bc8a5f;
+    transform: translateY(-2px);
+}
+
+.quote-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dog-image-container {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#dog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.quote-content {
+    padding: 30px;
+}
+
+.quote-text {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    line-height: 1.8;
+}
+
+.quote-text i:first-child {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: 0.3;
+    font-size: 50px;
+    color: #d4a373;
+}
+
+.quote-text i:last-child {
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    opacity: 0.3;
+    font-size: 50px;
+    color: #d4a373;
+}
+
+.quote-author {
+    text-align: right;
+    font-style: italic;
+    font-size: 18px;
+    color: #8b5a2b;
+    margin-bottom: 25px;
+}
+
+.quote-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #8b5a2b;
+}
+
+footer a {
+    color: #d4a373;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .quote-card {
+        flex-direction: column;
+    }
+    
+    .dog-image-container {
+        height: 200px;
+    }
+    
+    .quote-text {
+        font-size: 18px;
+    }
+    
+    .quote-actions {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+        justify-content: center;
+    }
+}

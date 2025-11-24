@@ -3,37 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Frontend Jokes</title>
+  <link rel="stylesheet" href="dog.css">
   <style>
     body {
-      font-family: sans-serif;
-      background: #f2f2f2;
+      font-family: 'Comic Neue', cursive, sans-serif;
+      background-color: #f9f3e9;
+      color: #5a3e36;
       text-align: center;
       padding: 50px;
+      min-height: 100vh;
+      margin: 0;
     }
+
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-size: 3rem;
+      margin-bottom: 40px;
+      animation: bounceIn 1s ease-out;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.05); }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
     .joke-box {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 500px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
       margin: auto;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      font-size: 1.2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      font-size: 1.5rem;
+      line-height: 1.6;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .joke-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
     button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #007bff;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 50px;
       cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
+
     button:hover {
-      background: #0056b3;
+      background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    nav {
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="dogs.html">Dogs</a>
+    <a href="jokes.html">Jokes</a>
+  </nav>
 
   <h1>😂 Frontend Dev Jokes</h1>
   <div class="joke-box" id="joke">Click below to get a joke!</div>
